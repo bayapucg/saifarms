@@ -89,10 +89,7 @@ $(function () {
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-		 //Timepicker
-	    $(".timepicker").timepicker({
-	      showInputs: false
-	    });
+	
 	    $('#defaultForm').bootstrapValidator({
 			fields: {
 	            name: {
@@ -103,12 +100,15 @@ $(document).ready(function() {
 					}
 				},image: {
 				   validators: {
+					   notEmpty: {
+							message: 'video/Image is required'
+						},
 						regexp: {
-						regexp: "(.*?)\.(png|Png|jpg|jpeg||Jpg|Jpeg|gif)$",
-						message: 'Uploaded file is not a valid. Only png,jpg,gif files are allowed'
+						regexp: "(.*?)\.(mp4|MP4)$",
+						message: 'Uploaded file is not a valid. Only mp4 files are allowed'
 						}
 					}
-				},msg: {
+				},description: {
 				   validators: {
 					   notEmpty: {
 							message: 'Message is required'

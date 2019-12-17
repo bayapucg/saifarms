@@ -30,6 +30,7 @@
   <!-- Main Stylesheet File -->
   <link href="<?php echo base_url(); ?>assets/front/css/style.css" rel="stylesheet">
   <link href="<?php echo base_url(); ?>assets/front/css/custom.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>assets/design/css/custom.css" rel="stylesheet">
   <script src="<?php echo base_url(); ?>assets/front/lib/jquery/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/front/lib/jquery/jquery-migrate.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/front/lib/bootstrap/js/bootstrap.min.js"></script>

@@ -115,4 +115,30 @@ class Content_model extends CI_Model
 		$this->db->where('ab_id',1);
         return $this->db->get()->row_array();
 	}
+	
+	/* save videos */
+	
+	public  function save_videos($d){
+		$this->db->insert('videos',$d);
+		return $this->db->insert_id();
+	}
+	
+	public  function get_video_list(){
+		$this->db->select('v_id,name,video,org_name,status,created_at')->from('videos');		
+		$this->db->where('status !=',2);
+        return $this->db->get()->result_array();
+	}
+	public  function get_video_details($id){
+		$this->db->select('v_id,name,video,org_name,status,created_at')->from('videos');		
+		$this->db->where('v_id',$id);
+        return $this->db->get()->row_array();
+	}
+	public  function video_update($id,$d){
+		$this->db->where('v_id',$id);
+		return $this->db->update('videos',$d);		
+	}
+	public  function delete_video($id){
+		$this->db->where('v_id',$id);
+		return $this->db->delete('videos');		
+	}
 }

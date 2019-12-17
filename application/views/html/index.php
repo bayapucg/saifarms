@@ -104,21 +104,17 @@
 		 <?php $ac++;} ?>
 		 </div>
 		<?php } ?>
+		<?php if(isset($v_list) && count($v_list)>0){ ?>
 		<div class="row">
+			<?php foreach($v_list as $li){ ?>
 			<div class="col-md-6">
 				<video width="100%"  controls muted autoplay>
-				  <source src="<?php echo base_url(); ?>assets/front/video/sheap.mp4" type="video/mp4">
-				  <source src="<?php echo base_url(); ?>assets/front/video/sheap.ogg" type="video/ogg">
+				  <source src="<?php echo base_url('assets/video/'.$li['video']); ?>" type="video/mp4">
 				</video>
 			</div>
-			<div class="col-md-6">
-					<video width="100%"  controls muted autoplay>
-			  <source src="<?php echo base_url(); ?>assets/front/video/chiken.mp4" type="video/mp4">
-			  <source src="<?php echo base_url(); ?>assets/front/video/chiken.ogg" type="video/ogg">
-			  
-			</video>
-			</div>
+			<?php } ?>
 		</div>
+		<?php } ?>
 
       </div>
     </section><!-- #services -->

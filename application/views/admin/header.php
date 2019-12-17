@@ -105,6 +105,43 @@
         </li>
 		<li class="treeview">
           <a href="#">
+            <i class="fa fa-list-alt"></i> <span>Home page</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+		  <ul class="treeview-menu" style="display: none;">
+            <li>
+              <a href="<?php echo base_url('content/home'); ?>">Aboutus 
+                
+              </a>
+            </li>
+            <li><a href="<?php echo base_url('content/service'); ?>">Services</a></li>
+            <li><a href="<?php echo base_url('content/factdetails'); ?>">Fact Details</a></li>
+            <li><a href="<?php echo base_url('content/founderdetails'); ?>">Founder Details</a></li>
+            
+          </ul>
+          
+        </li>
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-envelope"></i> <span>Home page video</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: none;">
+            <li>
+              <a href="<?php echo base_url('content/homevideo'); ?>">Add 
+                
+              </a>
+            </li>
+            <li><a href="<?php echo base_url('content/homevideolist'); ?>">List</a></li>
+            
+          </ul>
+        </li>
+		<li class="treeview">
+          <a href="#">
             <i class="fa fa-envelope"></i> <span>Testimonials</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -171,26 +208,7 @@
           </a>         
         </li>
 	
-		<li class="treeview">
-          <a href="#">
-            <i class="fa fa-list-alt"></i> <span>Home page</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-		  <ul class="treeview-menu" style="display: none;">
-            <li>
-              <a href="<?php echo base_url('content/home'); ?>">Aboutus 
-                
-              </a>
-            </li>
-            <li><a href="<?php echo base_url('content/service'); ?>">Services</a></li>
-            <li><a href="<?php echo base_url('content/factdetails'); ?>">Fact Details</a></li>
-            <li><a href="<?php echo base_url('content/founderdetails'); ?>">Founder Details</a></li>
-            
-          </ul>
-          
-        </li>
+		
 		
 		
     

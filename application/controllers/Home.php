@@ -18,6 +18,7 @@ class Home extends Frontend {
 		$data['home_fact']=$this->Home_model->get_home_fact(1);
 		$data['home_founder']=$this->Home_model->get_founder_details(1);
 		$data['testimonials']=$this->Home_model->get_testimonials();
+		$data['v_list']=$this->Home_model->get_videos();
 		//echo '<pre>';print_r($data);exit;
 		$this->load->view('html/index',$data);
 		$this->load->view('html/footer');

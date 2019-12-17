@@ -59,4 +59,5 @@ class Galleries_model extends CI_Model
 		return $this->db->delete('services');		
 	}
 	
+	
 }

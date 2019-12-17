@@ -401,6 +401,107 @@ class Content extends sidebar {
 				redirect('admin');
 			}
 	}
+	public function homevideo()
+	{	
+		if($this->session->userdata('sai_f'))
+			{
+				$l_data=$this->session->userdata('sai_f');
+				//echo '<pre>';print_r($data);exit;
+				$this->load->view('videos/add');
+				$this->load->view('admin/footer');
+				$this->load->view('admin/footer-links');
+			}else{
+				$this->session->set_flashdata('error','Please login to continue');
+				redirect('admin');
+			}
+	}
+	public function homevideolist()
+	{	
+		if($this->session->userdata('sai_f'))
+			{
+				$l_data=$this->session->userdata('sai_f');
+				//echo '<pre>';print_r($data);exit;
+				$data['v_list']=$this->Content_model->get_video_list();
+				$this->load->view('videos/list',$data);
+				$this->load->view('admin/footer');
+				$this->load->view('admin/footer-links');
+			}else{
+				$this->session->set_flashdata('error','Please login to continue');
+				redirect('admin');
+			}
+	}
+	public function videoaddpost(){
+		if($this->session->userdata('sai_f'))
+		{
+			$l_data=$this->session->userdata('sai_f');
+			$post=$this->input->post();
+			//echo '<pre>';print_r($post);exit;
+			if(isset($_FILES["image"]["name"]) && $_FILES["image"]["name"]!=''){
+				$temp = explode(".", $_FILES["image"]["name"]);
+				$orgimg =$_FILES["image"]["name"];
+				$img =round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($_FILES['image']['tmp_name'], "assets/video/" . $img);
+			}
+			$u_data=array(
+			 'name'=>isset($post['name'])?$post['name']:'',
+			 'video'=>isset($img)?$img:'',
+			 'org_name'=>isset($orgimg)?$orgimg:'',
+			 'created_at'=>date('Y-m-d H:i:s'),
+			 'created_by'=>date('Y-m-d H:i:s'),
+			);
+			$save=$this->Content_model->save_videos($u_data);
+			if(count($save)>0){
+				$this->session->set_flashdata('success',"video added successfully");
+				redirect('content/homevideolist');
+			}else{
+				$this->session->set_flashdata('error',"Technical problem will occured. Please try again");
+				redirect('content/homevideo');
+			}
+		}else{
+				$this->session->set_flashdata('error','Please login to continue');
+				redirect('admin');
+			}
+	}
+	public  function videostatus(){
+			$b_id=base64_decode($this->uri->segment(3));
+			$statu=base64_decode($this->uri->segment(4));
+			if($statu==1){
+				$st=0;	
+			}else{
+				$st=1;
+			}
+			$u_data=array(
+			'status'=>$st,
+			'updated_at'=>date('Y-m-d H:i:s')
+			);
+			$update=$this->Content_model->video_update($b_id,$u_data);
+			if(count($update)>0){
+				if($statu==0){
+					$this->session->set_flashdata('success',"video activated successfully");
+				}else{
+					$this->session->set_flashdata('success',"video deactivated successfully");
+				}
+				redirect('content/homevideolist');
+			}else{
+				$this->session->set_flashdata('error',"Technical problem will occured. Please try again");
+				redirect('content/homevideolist');
+			}
+		
+	}
+	public  function videodelete(){
+			$b_id=base64_decode($this->uri->segment(3));
+			$details=$this->Content_model->get_video_details($b_id);
+			$update=$this->Content_model->delete_video($b_id);
+			if(count($update)>0){
+				unlink('assets/video/'.$details['video']);
+				$this->session->set_flashdata('success',"video deleted successfully");
+				redirect('content/homevideolist');
+			}else{
+				$this->session->set_flashdata('error',"Technical problem will occured. Please try again");
+				redirect('content/homevideolist');
+			}
+		
+	}
 	
 	
 	

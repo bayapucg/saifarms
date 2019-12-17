@@ -16,11 +16,10 @@
             <h4>Useful Links</h4>
             <ul>
               
-              <li><i class="ion-ios-arrow-right"></i> <a href="about-us.php">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="contactus.php">contact us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Gallery</a></li>
-			  <li><i class="ion-ios-arrow-right"></i> <a href="#">Contact us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="<?php echo base_url(''); ?>">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="<?php echo base_url('aboutus'); ?>">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="<?php echo base_url('contactus'); ?>">contact us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="<?php echo base_url('gallery'); ?>">Gallery</a></li>
             </ul>
           </div>
 
@@ -55,11 +54,11 @@ Prakasam District, Andhrapradesh<br>
 
     <div class="container">
       <div class="copyright">
-       © 2019   Copyright <strong>RosveHealth</strong>. All Rights Reserved
+       © 2019   Copyright <strong>SAIFARMS</strong>. All Rights Reserved
       </div>
       <div class="credits">
         
-        Designed by <a href="https://medspaceit.com/s">medspaceit</a>
+        Designed by <a href="https://medspaceit.com/">medspaceit</a>
       </div>
     </div>
   </footer><!-- #footer -->

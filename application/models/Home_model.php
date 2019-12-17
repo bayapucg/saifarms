@@ -92,6 +92,12 @@ class Home_model extends CI_Model
 		return $this->db->get()->row_array();	
 	}
 	
+	public  function get_videos(){
+		$this->db->select('name,video,org_name')->from('videos');		
+		$this->db->where('status',1);
+        return $this->db->get()->result_array();
+	}
+	
 	
 	
 	
