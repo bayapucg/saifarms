@@ -8,10 +8,10 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-			<li class="<?php if($this->uri->segment(1)==''){ echo "menu-active";} ?>"><a href="<?php echo base_url(); ?>">Home </a></li>
-			<li class="<?php if($this->uri->segment(1)=='aboutus'){ echo "menu-active";} ?>"><a href="<?php echo base_url('aboutus'); ?>">About </a></li>
-			<li class="menu-has-children <?php if($this->uri->segment(1)=='services'){ echo "menu-active";} ?>">
-				<a href="#">Services</a>
+			<li><a class="<?php if($this->uri->segment(1)==''){ echo "menu-active";} ?>" href="<?php echo base_url(); ?>">Home </a></li>
+			<li><a  class="<?php if($this->uri->segment(1)=='aboutus'){ echo "menu-active";} ?>" href="<?php echo base_url('aboutus'); ?>">About </a></li>
+			<li class="menu-has-children ">
+				<a class="<?php if($this->uri->segment(1)=='services'){ echo "menu-active";} ?>" href="#">Services</a>
 				<?php if(isset($s_list) && count($s_list)>0){ ?>
 					<ul>
 					<?php foreach($s_list as $li){ ?>
@@ -20,8 +20,8 @@
 				   </ul>
 				   <?php } ?>
 			  </li>
-		    <li class="<?php if($this->uri->segment(1)=='gallery'){ echo "menu-active";} ?>"><a href="<?php echo base_url('gallery'); ?>">Gallery </a></li>
-		    <li class="<?php if($this->uri->segment(1)=='contactus'){ echo "menu-active";} ?>"><a href="<?php echo base_url('contactus'); ?>">Contact Us </a></li>
+		    <li><a class="<?php if($this->uri->segment(1)=='gallery'){ echo "menu-active";} ?>" href="<?php echo base_url('gallery'); ?>">Gallery </a></li>
+		    <li><a class="<?php if($this->uri->segment(1)=='contactus'){ echo "menu-active";} ?>" href="<?php echo base_url('contactus'); ?>">Contact Us </a></li>
 		    
           
         </ul>
