@@ -74,11 +74,11 @@ CREATE TABLE `contact_list` (
   `message` longtext,
   `create_at` datetime DEFAULT NULL,
   PRIMARY KEY (`c_l_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `contact_list` */
 
-insert  into `contact_list`(`c_l_id`,`name`,`mobile`,`email`,`message`,`create_at`) values (1,'Vasudevareddy','8500050944','vasudevareddy@gmail.com','LIke  this ','2019-12-16 19:28:57'),(2,'Vasudevareddy','8500050944','vasudevareddy@gmail.com','LIke  this ','2019-12-16 19:29:27');
+insert  into `contact_list`(`c_l_id`,`name`,`mobile`,`email`,`message`,`create_at`) values (1,'Vasudevareddy','8500050944','vasudevareddy@gmail.com','LIke  this ','2019-12-16 19:28:57'),(2,'Vasudevareddy','8500050944','vasudevareddy@gmail.com','LIke  this ','2019-12-16 19:29:27'),(3,'chinna','8500050944','admin@gmail.com','Testing ','2019-12-17 14:32:00'),(4,'chinna','8500050944','admin@gmail.com','xcZXC','2019-12-17 14:32:49');
 
 /*Table structure for table `contactus_details` */
 
@@ -281,11 +281,11 @@ CREATE TABLE `services` (
   `updated_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`s_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `services` */
 
-insert  into `services`(`s_id`,`name`,`b_description`,`description`,`image`,`org_image`,`status`,`created_at`,`updated_at`,`created_by`) values (2,'Breading Rams',' <p><strong>Breed selection</strong> is based on the intended\r\nmarket(s), on local climate, and personal preference. Breeds can be divided into eight categories.</p>\r\n    <p>To produce organic sheep, the farm must be registered with an approved organic control body. These control bodies each require a detailed set of standards to be followed. The system adopted should comply with those of your chosen control body since individual control body standards may differ slightly from each other, and from the EU Organic Standard. Some of the key aspects of production are given below.</p>\r\n   ','<p>If you are interested in alternative production and marketing methods, you may want to consider organic. “Organic” means, among other things, raising crops or livestock in a way that builds the soil and enhances biodiversity and ecological balance. Th e term “organic” may not be used except under a production system that meets all the requirements of the National Organic Program Regulations</p>\r\n','1576565585.mp4','breeding.mp4',1,'2019-12-17 12:23:05','2019-12-17 13:01:36',3),(3,'Breading Rams 1',' <p><strong>Breed selection</strong> is based on the intended\r\nmarket(s), on local climate, and personal preference. Breeds can be divided into eight categories.</p>\r\n    <p>To produce organic sheep, the farm must be registered with an approved organic control body. These control bodies each require a detailed set of standards to be followed. The system adopted should comply with those of your chosen control body since individual control body standards may differ slightly from each other, and from the EU Organic Standard. Some of the key aspects of production are given below.</p>\r\n   ','<p>If you are interested in alternative production and marketing methods, you may want to consider organic. “Organic” means, among other things, raising crops or livestock in a way that builds the soil and enhances biodiversity and ecological balance. Th e term “organic” may not be used except under a production system that meets all the requirements of the National Organic Program Regulations</p>\r\n','1576565615.mp4','chiken.mp4',1,'2019-12-17 12:23:35','2019-12-17 13:01:10',3);
+insert  into `services`(`s_id`,`name`,`b_description`,`description`,`image`,`org_image`,`status`,`created_at`,`updated_at`,`created_by`) values (2,'Breading Rams',' <p><strong>Breed selection</strong> is based on the intended\r\nmarket(s), on local climate, and personal preference. Breeds can be divided into eight categories.</p>\r\n    <p>To produce organic sheep, the farm must be registered with an approved organic control body. These control bodies each require a detailed set of standards to be followed. The system adopted should comply with those of your chosen control body since individual control body standards may differ slightly from each other, and from the EU Organic Standard. Some of the key aspects of production are given below.</p>\r\n   ','<p>If you are interested in alternative production and marketing methods, you may want to consider organic. “Organic” means, among other things, raising crops or livestock in a way that builds the soil and enhances biodiversity and ecological balance. Th e term “organic” may not be used except under a production system that meets all the requirements of the National Organic Program Regulations</p>\r\n','1576565585.mp4','breeding.mp4',1,'2019-12-17 12:23:05','2019-12-17 13:01:36',3);
 
 /*Table structure for table `testimonials` */
 
@@ -307,6 +307,26 @@ CREATE TABLE `testimonials` (
 /*Data for the table `testimonials` */
 
 insert  into `testimonials`(`t_id`,`name`,`text`,`message`,`image`,`status`,`created_at`,`updated_at`,`created_by`) values (1,'Srinivasa Reddy','Reddy Meat Store','Sai meat farms is a great place to work. It was organized and everyone got along. Goats and Sheap is very healthy and active.','1576497780.jpg',2,'2019-12-16 17:33:14','2019-12-16 17:33:14',3),(2,'Srinivasa Reddy','Reddy Meat Store','Sai meat farms is a great place to work. It was organized and everyone got along. Goats and Sheap is very healthy and active.','1576497831.jpg',1,'2019-12-16 17:34:43','2019-12-16 17:34:43',3),(3,'Chandu','Chandu Chicken & Mutton Center','Thanks for Sai Farms, Really am so happy for joined with Sai Farms. They provide on time and health Goats and Sheap with Organic process','1576497984.jpg',1,'2019-12-16 17:36:24','0000-00-00 00:00:00',3);
+
+/*Table structure for table `videos` */
+
+DROP TABLE IF EXISTS `videos`;
+
+CREATE TABLE `videos` (
+  `v_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) DEFAULT NULL,
+  `video` varchar(250) DEFAULT NULL,
+  `org_name` varchar(250) DEFAULT NULL,
+  `status` int(11) DEFAULT '1',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`v_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+/*Data for the table `videos` */
+
+insert  into `videos`(`v_id`,`name`,`video`,`org_name`,`status`,`created_at`,`updated_at`,`created_by`) values (3,'Sheap','1576572664.mp4','sheap.mp4',1,'2019-12-17 14:21:04',NULL,2019),(4,'chiken','1576572673.mp4','chiken.mp4',1,'2019-12-17 14:21:13',NULL,2019);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
