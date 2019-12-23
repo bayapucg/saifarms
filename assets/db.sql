@@ -139,11 +139,11 @@ CREATE TABLE `galleries` (
   `updated_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`g_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 /*Data for the table `galleries` */
 
-insert  into `galleries`(`g_id`,`name`,`image`,`org_image`,`status`,`created_at`,`updated_at`,`created_by`) values (2,'Breading Sheap','1576500894.png','3.png',1,'2019-12-16 18:24:54','2019-12-16 18:29:58',3),(3,'Breading Sheap','1576501073.png','1.png',1,'2019-12-16 18:27:53',NULL,3),(4,'Breading Sheap','1576501080.png','4.png',1,'2019-12-16 18:28:00',NULL,3),(5,'Breading Sheap','1576501088.png','5.png',1,'2019-12-16 18:28:07',NULL,3),(6,'Breading Sheap','1576501093.png','8.png',1,'2019-12-16 18:28:13',NULL,3),(7,'Breading Sheap','1576501099.png','7.png',1,'2019-12-16 18:28:19',NULL,3),(8,'Breading Sheap','1576501105.png','9.png',1,'2019-12-16 18:28:24',NULL,3),(9,'Breading Sheap','1576501110.png','11.png',1,'2019-12-16 18:28:30',NULL,3),(11,'Breading Sheap','1576501151.png','12.png',1,'2019-12-16 18:29:10',NULL,3),(12,'Breading Sheap','1576501158.png','11.png',1,'2019-12-16 18:29:18',NULL,3),(13,'Breading Sheap','1576501164.png','10.png',1,'2019-12-16 18:29:24',NULL,3),(14,'Breading Sheap','1576501174.png','2.png',1,'2019-12-16 18:29:33',NULL,3),(15,'Breading Sheap','1576501181.png','6.png',1,'2019-12-16 18:29:40',NULL,3),(17,'Breading Sheap','1576501721.png','1.png',1,'2019-12-16 18:38:40',NULL,3);
+insert  into `galleries`(`g_id`,`name`,`image`,`org_image`,`status`,`created_at`,`updated_at`,`created_by`) values (2,'Breading Sheap','1576500894.png','3.png',1,'2019-12-16 18:24:54','2019-12-16 18:29:58',3),(3,'Breading Sheap','1576501073.png','1.png',1,'2019-12-16 18:27:53',NULL,3),(4,'Breading Sheap','1576501080.png','4.png',1,'2019-12-16 18:28:00',NULL,3),(5,'Breading Sheap','1576501088.png','5.png',1,'2019-12-16 18:28:07',NULL,3),(6,'Breading Sheap','1576501093.png','8.png',1,'2019-12-16 18:28:13',NULL,3),(7,'Breading Sheap','1576501099.png','7.png',1,'2019-12-16 18:28:19',NULL,3),(8,'Breading Sheap','1576501105.png','9.png',1,'2019-12-16 18:28:24',NULL,3),(9,'Breading Sheap','1576501110.png','11.png',1,'2019-12-16 18:28:30',NULL,3),(11,'Breading Sheap','1576501151.png','12.png',1,'2019-12-16 18:29:10',NULL,3),(12,'Breading Sheap','1576501158.png','11.png',1,'2019-12-16 18:29:18',NULL,3),(13,'Breading Sheap','1576501164.png','10.png',1,'2019-12-16 18:29:24',NULL,3),(14,'Breading Sheap','1576501174.png','2.png',1,'2019-12-16 18:29:33',NULL,3),(15,'Breading Sheap','1576501181.png','6.png',1,'2019-12-16 18:29:40',NULL,3),(17,'Breading Sheap','1576501721.png','1.png',1,'2019-12-16 18:38:40',NULL,3),(18,'Saifarms','1577093627.png','1.png',1,'2019-12-23 15:03:47',NULL,3),(19,'Saifarms','1577093637.png','2.png',1,'2019-12-23 15:03:57',NULL,3),(20,'Saifarms','1577093646.png','3.png',1,'2019-12-23 15:04:05',NULL,3),(22,'Saifarms','1577093663.png','4.png',1,'2019-12-23 15:04:23',NULL,3),(23,'Saifarms','1577093671.png','5.png',1,'2019-12-23 15:04:31',NULL,3),(24,'Saifarms','1577093679.png','6.png',1,'2019-12-23 15:04:39',NULL,3),(26,'Saifarms','1577093696.png','7.png',1,'2019-12-23 15:04:56',NULL,3),(27,'Saifarms','1577093704.png','7.png',1,'2019-12-23 15:05:04',NULL,3),(28,'Saifarms','1577093712.png','8.png',1,'2019-12-23 15:05:11',NULL,3),(29,'Saifarms','1577093723.png','9.png',1,'2019-12-23 15:05:23',NULL,3),(31,'Saifarms','1577093741.png','10.png',1,'2019-12-23 15:05:41',NULL,3),(32,'Saifarms','1577093752.png','11.png',1,'2019-12-23 15:05:51',NULL,3),(33,'Saifarms','1577093761.png','12.png',1,'2019-12-23 15:06:00',NULL,3);
 
 /*Table structure for table `home_banners` */
 
@@ -322,11 +322,11 @@ CREATE TABLE `videos` (
   `updated_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`v_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `videos` */
 
-insert  into `videos`(`v_id`,`name`,`video`,`org_name`,`status`,`created_at`,`updated_at`,`created_by`) values (3,'Sheap','1576572664.mp4','sheap.mp4',1,'2019-12-17 14:21:04',NULL,2019),(4,'chiken','1576572673.mp4','chiken.mp4',1,'2019-12-17 14:21:13',NULL,2019);
+insert  into `videos`(`v_id`,`name`,`video`,`org_name`,`status`,`created_at`,`updated_at`,`created_by`) values (3,'Sheap','1576572664.mp4','sheap.mp4',1,'2019-12-17 14:21:04',NULL,2019),(4,'chiken','1576572673.mp4','chiken.mp4',0,'2019-12-17 14:21:13','2019-12-23 15:08:20',2019),(5,'video','1577093952.mp4','WhatsApp Video 2019-12-23 at 1.25.49 PM.mp4',1,'2019-12-23 15:09:11',NULL,2019);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
