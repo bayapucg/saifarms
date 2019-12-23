@@ -108,7 +108,7 @@
 		<div class="row">
 			<?php foreach($v_list as $li){ ?>
 			<div class="col-md-6">
-				<video width="100%"  controls muted autoplay>
+				<video width="100%"  controls  autoplay>
 				  <source src="<?php echo base_url('assets/video/'.$li['video']); ?>" type="video/mp4">
 				</video>
 			</div>
